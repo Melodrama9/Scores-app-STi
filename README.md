@@ -1,2 +1,2 @@
-# Scores-app
+# Scores-app-STi
 Creates scores
