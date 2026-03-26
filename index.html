@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Code Generator</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 600px; }
+    input { padding: 6px; width: 120px; }
+    button { padding: 6px 10px; margin-left: 6px; }
+    #out { margin-top: 15px; width: 100%; height: 150px; }
+  </style>
+</head>
+<body>
+  <h2>Code Generator</h2>
+  <p>Enter a number from 1 to 4000:</p>
+  <input id="num" type="number" min="1" max="4000" />
+  <button onclick="gen()">Generate</button>
+
+  <textarea id="out" readonly></textarea>
+
+<script>
+function gen() {
+  const n = Number(document.getElementById('num').value);
+  if (!Number.isInteger(n) || n < 1 || n > 4000) {
+    alert('Enter a valid number between 1 and 4000');
+    return;
+  }
+  const result = Array(n).fill('10000-1-1').join(',');
+  document.getElementById('out').value = result;
+}
+</script>
+</body>
+</html>
