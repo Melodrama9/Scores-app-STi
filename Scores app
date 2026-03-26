@@ -25,7 +25,7 @@ function gen() {
     alert('Enter a valid number between 1 and 4000');
     return;
   }
-  const result = Array(n).fill('10000-1-1').join(',');
+  const result = Array(n).fill('10000-1').join(',');
   document.getElementById('out').value = result;
 }
 </script>
